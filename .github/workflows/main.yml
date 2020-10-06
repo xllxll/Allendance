@@ -19,16 +19,7 @@ jobs:
           python-version: '3.6'
       - name: 'Install dependencies'
         run: python -m pip install --upgrade requests
-      - name: 'Tieba Sign'
-        env:
-          BDUSS: ${{ secrets.BDUSS }}
-        run: python module/tieba.py
       - name: 'Pojie Sign'
         env:
           POJIECOOKIE: ${{ secrets.POJIECOOKIE }}
         run: python module/52pojie.py
-      - name: 'V2ex Sign'
-        env:
-          VVEX: ${{ secrets.VVEX }}
-        run: python module/v2ex.py
-        
